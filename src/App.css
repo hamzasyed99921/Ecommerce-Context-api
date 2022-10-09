@@ -1,0 +1,336 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root{
+  --mainColor: #f57224;
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --lightDark: #222;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+/* Navbar Start  */
+
+nav{
+  display: flex;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0,0.1);
+  position: fixed;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.left{
+  width: 50%;
+  text-align: left;
+}
+
+.left a{
+  color: var(--mainColor);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.right{
+  width: 50%;
+  text-align: right;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul a{
+  text-decoration: none;
+}
+
+#icon{
+  color: var(--lightDark);
+  font-size: 23px;
+  margin-right: 15px;
+  margin-top: 4px;
+  text-align: center;
+  line-height: 10px;
+}
+
+
+.cartCount{
+  display: inline-block;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navbar End */
+
+/* Banner Start */
+
+.container{
+  width: 100%;
+  padding: 85px 100px 20px 100px;
+}
+
+header{
+  width: 100%;
+  background: url("./assets/pexels-andrea-piacquadio-1050244\ \(1\).jpg");
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.headerText{
+  background-color: rgba(0, 0, 0,0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Banner End */
+
+/* Product Style start */
+.product-container{
+  width: 100%;
+  padding: 15px 100px 20px 100px;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.product{
+  width: 25%;
+  overflow: hidden;
+  padding: 0 10px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.product-img{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.hot{
+  position: absolute;
+  background-color: var(--mainColor);
+  color: #fff;
+  padding: 5px 20px;
+  top: 0px;
+}
+
+.new{
+  position: absolute;
+  background-color: rgb(47, 161, 255);
+  color: #fff;
+  padding: 5px 20px;
+  top: 0px;
+}
+
+.product-details{
+  padding: 8px 10px;
+  text-align: center;
+  background: var(--whiteColor);
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #fafafa;
+}
+
+.product-name{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.product-price{
+  font-size: 20px;
+  font-weight: 300;
+  margin: 12px 0;
+}
+
+.add-cart{
+  background-color: var(--mainColor);
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* Product Style End */
+
+
+/* Not Found style start */
+
+.not-found{
+  margin-top: 10px;
+}
+
+/* Cart style Start */
+
+.cart-container{
+  width: 100%;
+  /* margin-top: 100px; */
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.cart-details{
+  width: 75%;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+}
+
+.cart{
+  display: flex;
+  align-items: center;
+  background-color: var(--whiteColor);
+  padding: 15px 20px;
+  border-bottom: 1px solid #fafafa;
+  /* box-shadow: 0 0 8px 0 rgba(0, 0, 0,0.5); */
+}
+
+.cart-image{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  
+}
+
+.cart-image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.cart-product-name{
+  display: inline-block;
+  width: 150px;
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cart-product-price{
+  display: inline-block;
+  width: 120px;
+  padding: 0 15px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--mainColor);
+
+}
+
+.inc{
+  display: inline-block;
+  color: var(--mainColor);
+  cursor: pointer;
+}
+
+.product-quantity{
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 70px;
+  text-align: center;
+  
+}
+
+.dec{
+  display: inline-block;
+  color: rgb(224, 44, 44) ;
+  cursor: pointer;
+}
+
+.product-total-price{
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 170px;
+  text-align: center;
+}
+
+.delete-product{
+  color: rgb(224, 44, 44) ;
+  cursor: pointer;
+}
+
+/* cart section */
+
+.cart-summary{
+  width: 25%;
+  padding: 0 0 0 20px;
+}
+
+.summary{
+  background-color: var(--whiteColor);
+  padding: 13px;
+
+}
+
+.summary h3{
+  font-size: 18px;
+  font-weight: normal;
+  border-bottom: 1px solid #999;
+}
+
+.total-items{
+  display: flex;
+  margin: 15px 0;
+}
+
+.items{
+  width: 50%;
+  text-align: left;
+  font-weight: normal;
+}
+
+.items-count{
+  width: 50%;
+  text-align: right;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.total-price-section{
+  display: flex;
+  margin: 15px 0;
+   
+}
+
+.just-title{
+  width: 50%;
+  text-align: left;
+  font-weight: normal;
+
+}
+
+.items-price{
+  width: 50%;
+  text-align: right;
+  font-weight: bold;
+  color: var(--mainColor);
+  
+}
